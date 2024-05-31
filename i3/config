@@ -1,0 +1,184 @@
+# Mod key
+set $mod Mod4
+
+# Font
+font pango:FiraCode Nerd Font 12
+
+# XDG Autostart
+exec --no-startup-id dex --autostart --environment i3
+
+# Screen locking
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# Networking
+exec --no-startup-id nm-applet
+
+# Audio keys
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Use Mouse+$mod to drag floating windows
+floating_modifier $mod
+
+# Move tiling windows via drag & drop by left-clicking into the title bar
+# Or by left-clicking anywhere into the window while holding the floating modifier
+tiling_drag modifier titlebar
+
+# Start terminal
+bindsym $mod+Return exec kitty
+
+# Kill focused window
+bindsym $mod+Shift+q kill
+
+# Start program launcher
+bindsym $mod+d exec dmenu_run
+
+# Change focus (Vim bindings)
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Change focus (arrow keys)
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move window (Vim bindings)
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Move window (arrow keys)
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Open new windows right
+bindsym $mod+Shift+v split h
+
+# Open new windows below
+bindsym $mod+v split v
+
+# Toggle fullscreen
+bindsym $mod+f fullscreen toggle
+
+# Change container layout
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Toggle floating/tiling
+bindsym $mod+Shift+space floating toggle
+
+# Change focus between floating/tiling windows
+bindsym $mod+space focus mode_toggle
+
+# Focus parent container
+bindsym $mod+a focus parent
+
+# Default workspace names
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# Switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# Move container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# Reload config
+bindsym $mod+Shift+c reload
+
+# Restart i3
+bindsym $mod+Shift+r restart
+
+# Exit i3
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# Resize window (these bindings trigger in resize mode)
+mode "resize" {
+        # Vim bindings
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # Arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # Exit resize mode
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+# Enter resize mode
+bindsym $mod+r mode "resize"
+
+# Launch polybar
+exec --no-startup-id ~/.config/i3/scripts/polybar.sh
+
+# Open browser
+bindsym $mod+b exec firefox
+
+# Suspend machine
+bindsym $mod+Shift+s exec --no-startup-id systemctl suspend
+
+# Set permanent wallpaper
+exec_always --no-startup-id feh --bg-fill ~/Downloads/wallpaper.png
+
+# Hide title bars
+for_window [class="^.*"] border pixel 2
+
+# Change border colours Bord     Bg     Text    Indic   ChBord
+client.focused          #8fbcbb #2e3440 #5e81ac #8fbcbb #8fbcbb
+client.focused_inactive #2e3440 #2e3440 #5e81ac #2e3440 #2e3440
+client.unfocused        #2e3440 #2e3440 #5e81ac #2e3440 #2e3440
+client.urgent           #ebcb8b #2e3440 #5e81ac #ebcb8b #ebcb8b
+client.placeholder      #2e3440 #2e3440 #5e81ac #2e3440 #2e3440
+
+# Remap Caps Lock to Control
+exec --no-startup-id setxkbmap -option ctrl:nocaps
+
+# Rearrange monitors
+exec --no-startup-id xrandr --output DisplayPort-2 --auto --primary --output HDMI-A-0 --auto --left-of DisplayPort-2
+
+# Start picom
+exec --no-startup-id picom
+
