@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # Font
-font pango:FiraCode Nerd Font 12
+font pango:FiraCode Nerd Font 16
 
 # XDG Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -34,7 +34,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # Program launcher
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -fn "FiraCode Nerd Font:pixelsize=23" -nb "#0f111b" -nf "#ecf0c1" -sb "#ecf0c1" -sf "#0f111b"
 
 # Change focus (Vim bindings)
 bindsym $mod+h focus left
