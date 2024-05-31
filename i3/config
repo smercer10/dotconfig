@@ -152,7 +152,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Launch polybar
-exec --no-startup-id ~/.config/i3/scripts/polybar.sh
+exec --no-startup-id ~/.config/i3/scripts/launch_polybar.sh
 
 # Open browser
 bindsym $mod+b exec firefox
