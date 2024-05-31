@@ -13,7 +13,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # Networking
 exec --no-startup-id nm-applet
 
-# Audio keys
+# Audio buttons
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
@@ -27,13 +27,13 @@ floating_modifier $mod
 # Or by left-clicking anywhere into the window while holding the floating modifier
 tiling_drag modifier titlebar
 
-# Start terminal
+# Open terminal
 bindsym $mod+Return exec kitty
 
 # Kill focused window
 bindsym $mod+Shift+q kill
 
-# Start program launcher
+# Program launcher
 bindsym $mod+d exec dmenu_run
 
 # Change focus (Vim bindings)
@@ -164,7 +164,7 @@ bindsym $mod+Shift+s exec --no-startup-id systemctl suspend
 exec_always --no-startup-id feh --bg-fill ~/Downloads/wallpaper.png
 
 # Hide title bars
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 
 # Change border colours Bord     Bg     Text    Indic   ChBord
 client.focused          #8fbcbb #2e3440 #5e81ac #8fbcbb #8fbcbb
@@ -178,7 +178,3 @@ exec --no-startup-id setxkbmap -option ctrl:nocaps
 
 # Rearrange monitors
 exec --no-startup-id xrandr --output DisplayPort-2 --auto --primary --output HDMI-A-0 --auto --left-of DisplayPort-2
-
-# Start picom
-exec --no-startup-id picom
-
