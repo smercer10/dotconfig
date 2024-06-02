@@ -34,7 +34,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # Program launcher
-bindsym $mod+d exec dmenu_run -fn "FiraCode Nerd Font:pixelsize=23" -nb "#0f111b" -nf "#ecf0c1" -sb "#ecf0c1" -sf "#0f111b"
+bindsym $mod+d exec dmenu_run -fn "FiraCode Nerd Font:pixelsize=23" -nb "#000000" -nf "#ffffff" -sb "#ffffff" -sf "#000000"
 
 # Change focus (Vim bindings)
 bindsym $mod+h focus left
@@ -167,11 +167,11 @@ exec_always --no-startup-id feh --bg-fill ~/Downloads/wallpaper.png
 for_window [class="^.*"] border pixel 1
 
 # Change border colours Bord     Bg     Text    Indic   ChBord
-client.focused          #ecf0c1 #0f111b #ecf0c1 #ecf0c1 #ecf0c1
-client.focused_inactive #0f111b #0f111b #ecf0c1 #0f111b #0f111b
-client.unfocused        #0f111b #0f111b #ecf0c1 #0f111b #0f111b
-client.urgent           #0f111b #0f111b #ecf0c1 #0f111b #0f111b
-client.placeholder      #0f111b #0f111b #ecf0c1 #0f111b #0f111b
+client.focused          #ffffff #000000 #ffffff #ffffff #ffffff
+client.focused_inactive #000000 #000000 #ffffff #000000 #000000
+client.unfocused        #000000 #000000 #ffffff #000000 #000000
+client.urgent           #000000 #000000 #ffffff #000000 #000000
+client.placeholder      #000000 #000000 #ffffff #000000 #000000
 
 # Remap Caps Lock to Control
 exec --no-startup-id setxkbmap -option ctrl:nocaps
