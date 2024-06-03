@@ -161,7 +161,7 @@ bindsym $mod+b exec firefox
 bindsym $mod+Shift+s exec --no-startup-id systemctl suspend
 
 # Set permanent wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Downloads/wallpaper.png
+exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper.png
 
 # Hide title bars
 for_window [class="^.*"] border pixel 1
