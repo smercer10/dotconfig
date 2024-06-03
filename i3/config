@@ -167,11 +167,11 @@ exec_always --no-startup-id feh --bg-fill ~/Downloads/wallpaper.png
 for_window [class="^.*"] border pixel 1
 
 # Change border colours Bord     Bg     Text    Indic   ChBord
-client.focused          #ffffff #000000 #ffffff #ffffff #ffffff
-client.focused_inactive #000000 #000000 #ffffff #000000 #000000
-client.unfocused        #000000 #000000 #ffffff #000000 #000000
-client.urgent           #000000 #000000 #ffffff #000000 #000000
-client.placeholder      #000000 #000000 #ffffff #000000 #000000
+client.focused          #535353 #000000 #535353 #535353 #535353
+client.focused_inactive #000000 #000000 #535353 #000000 #000000
+client.unfocused        #000000 #000000 #535353 #000000 #000000
+client.urgent           #000000 #000000 #535353 #000000 #000000
+client.placeholder      #000000 #000000 #535353 #000000 #000000
 
 # Remap Caps Lock to Control
 exec --no-startup-id setxkbmap -option ctrl:nocaps
