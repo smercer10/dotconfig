@@ -34,7 +34,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # Program launcher
-bindsym $mod+d exec dmenu_run -fn "FiraCode Nerd Font:pixelsize=23" -nb "#000000" -nf "#ffffff" -sb "#ffffff" -sf "#000000"
+bindsym $mod+d exec dmenu_run -fn "FiraCode Nerd Font:pixelsize=23" -nb "#1e1e1e" -nf "#ffffff" -sb "#ffffff" -sf "#1e1e1e"
 
 # Change focus (Vim bindings)
 bindsym $mod+h focus left
