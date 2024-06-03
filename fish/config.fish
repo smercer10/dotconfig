@@ -18,3 +18,6 @@ function yy
     end
     rm -f -- "$tmp"
 end
+
+# opam configuration
+source /home/sam/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
