@@ -8,6 +8,7 @@ zoxide init fish | source
 # Aliases
 alias hx="helix"
 alias lg="lazygit"
+alias cd="z"
 
 # Open Yazi
 function yy
@@ -20,4 +21,4 @@ function yy
 end
 
 # opam configuration
-source /home/sam/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+source /home/sam/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
