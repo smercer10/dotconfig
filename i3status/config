@@ -1,0 +1,38 @@
+order += "volume master"
+order += "wireless wlan0"
+order += "ethernet eth0"
+order += "cpu_usage"
+order += "memory"
+order += "disk /"
+order += "time"
+
+volume master {
+        format = "VOL: %volume"
+        format_muted = "VOL: muted"
+}
+
+wireless wlan0 {
+        format_up = "WIFI: up"
+        format_down = "WIFI: down"
+}
+
+ethernet eth0 {
+        format_up = "ETH: up"
+        format_down = "ETH: down"
+}
+
+cpu_usage {
+        format = "CPU: %usage"
+}
+
+memory {
+        format = "MEM: %percentage_used"
+}
+
+disk / {
+        format = "DISK: %percentage_used"
+}
+
+time {
+        format = "%d-%m-%Y %H:%M:%S"
+}

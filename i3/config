@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # Font
-font pango:HackNerdFont 16
+font pango:HackNerdFont 12
 
 # XDG Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -34,7 +34,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # Program launcher
-bindsym $mod+d exec dmenu_run -fn "HackNerdFont:pixelsize=23" -nb "#1e1e1e" -nf "#ffffff" -sb "#ffffff" -sf "#1e1e1e"
+bindsym $mod+d exec dmenu_run -fn "HackNerdFont:pixelsize=16"
 
 # Change focus (Vim bindings)
 bindsym $mod+h focus left
@@ -151,27 +151,16 @@ mode "resize" {
 # Enter resize mode
 bindsym $mod+r mode "resize"
 
-# Launch polybar
-exec --no-startup-id ~/.config/i3/scripts/launch_polybar.sh
+# Status bar
+bar {
+        status_command i3status
+}
 
 # Open browser
 bindsym $mod+b exec brave
 
 # Suspend machine
 bindsym $mod+Shift+s exec --no-startup-id systemctl suspend
-
-# Set permanent wallpaper
-exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper.png
-
-# Hide title bars
-for_window [class="^.*"] border pixel 1
-
-# Change border colours Bord     Bg     Text    Indic   ChBord
-client.focused          #535353 #000000 #535353 #535353 #535353
-client.focused_inactive #000000 #000000 #535353 #000000 #000000
-client.unfocused        #000000 #000000 #535353 #000000 #000000
-client.urgent           #000000 #000000 #535353 #000000 #000000
-client.placeholder      #000000 #000000 #535353 #000000 #000000
 
 # Remap Caps Lock to Control
 exec --no-startup-id setxkbmap -option ctrl:nocaps
