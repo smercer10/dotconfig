@@ -165,5 +165,8 @@ bindsym $mod+Shift+s exec --no-startup-id systemctl suspend
 # Remap Caps Lock to Control
 exec --no-startup-id setxkbmap -option ctrl:nocaps
 
-# Rearrange monitors
-exec --no-startup-id xrandr --output DisplayPort-2 --auto --primary --output HDMI-A-0 --auto --left-of DisplayPort-2
+# Swap monitors
+# exec --no-startup-id xrandr --output HDMI-A-0 --left-of DisplayPort-2
+
+# Set permanent wallpaper
+exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper.png
