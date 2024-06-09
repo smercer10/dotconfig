@@ -2,7 +2,7 @@
 
 My productivity-focused (and somewhat aesthetically agnostic) configs for Arch/i3.
 
-# Toolstack
+## Toolstack
 
 - **Distro/WM**: [Arch](https://archlinux.org/)/[i3](https://i3wm.org/) (obviously)
 - **Status bar**: [i3bar](https://i3wm.org/i3bar/) w/ [i3status](https://i3wm.org/docs/i3status.html)
