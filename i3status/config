@@ -1,4 +1,3 @@
-order += "volume master"
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "cpu_usage"
@@ -6,19 +5,14 @@ order += "memory"
 order += "disk /"
 order += "time"
 
-volume master {
-        format = "VOL: %volume"
-        format_muted = "VOL: muted"
-}
-
 wireless _first_ {
-        format_up = "WIFI: up"
-        format_down = "WIFI: down"
+        format_up = "WIFI: on"
+        format_down = "WIFI: off"
 }
 
 ethernet _first_ {
-        format_up = "ETH: up"
-        format_down = "ETH: down"
+        format_up = "ETH: on"
+        format_down = "ETH: off"
 }
 
 cpu_usage {
