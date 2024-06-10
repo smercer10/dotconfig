@@ -165,7 +165,7 @@ for_window [class="^.*"] border pixel 1
 bindsym $mod+b exec brave
 
 # Suspend machine
-bindsym $mod+Shift+s exec --no-startup-id systemctl suspend
+bindsym $mod+Shift+x exec --no-startup-id systemctl suspend
 
 # Remap Caps Lock to Control
 exec --no-startup-id setxkbmap -option ctrl:nocaps
@@ -175,3 +175,6 @@ exec --no-startup-id xrandr --output DisplayPort-2 --auto --primary --output HDM
 
 # Set permanent wallpaper
 exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper.png
+
+# Screenshots
+bindsym $mod+Shift+s exec --no-startup-id flameshot gui
