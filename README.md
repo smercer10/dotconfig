@@ -13,5 +13,7 @@ My productivity-focused (and somewhat aesthetically agnostic) configs for Arch/i
 - **Terminal multiplexer**: [tmux](https://github.com/tmux/tmux/wiki)
 - **Text editor**: [Helix](https://helix-editor.com/)
 - **File manager**: [Yazi](https://yazi-rs.github.io/)
+- **Screenshotting**: [Flameshot](https://flameshot.org/)
 - **Git client**: [Lazygit](https://github.com/jesseduffield/lazygit)
-- **Other**: [zoxide](https://github.com/ajeetdsouza/zoxide), [flameshot](https://flameshot.org/), [eza](https://github.com/eza-community/eza)
+- **Directory navigation**: [zoxide](https://github.com/ajeetdsouza/zoxide)
+-  **File lister**: [eza](https://github.com/eza-community/eza)
