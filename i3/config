@@ -156,6 +156,9 @@ bar {
         status_command i3status
 }
 
+# Hide title bars
+for_window [class="^.*"] border pixel 1
+
 # Open browser
 bindsym $mod+b exec brave
 
