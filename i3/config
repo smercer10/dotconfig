@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # Font
-font pango:ComicMono 12
+font pango:CaskaydiaMonoNerdFont 14
 
 # XDG Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -34,7 +34,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # Program launcher
-bindsym $mod+d exec dmenu_run -fn "ComicMono:pixelsize=14"
+bindsym $mod+d exec dmenu_run -fn "CaskaydiaMonoNerdFont:pixelsize=18"
 
 # Change focus (Vim bindings)
 bindsym $mod+h focus left
