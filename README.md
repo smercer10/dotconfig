@@ -14,4 +14,4 @@ My productivity-focused (and somewhat aesthetically agnostic) configs for Arch/i
 - **Text editor**: [Helix](https://helix-editor.com/)
 - **File manager**: [Yazi](https://yazi-rs.github.io/)
 - **Git client**: [Lazygit](https://github.com/jesseduffield/lazygit)
-- **Other**: [zoxide](https://github.com/ajeetdsouza/zoxide), [eza](https://github.com/eza-community/eza)
+- **Other**: [zoxide](https://github.com/ajeetdsouza/zoxide), [flameshot](https://flameshot.org/), [eza](https://github.com/eza-community/eza)
