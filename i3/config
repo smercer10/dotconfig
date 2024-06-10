@@ -175,4 +175,4 @@ exec --no-startup-id xrandr --output DisplayPort-2 --auto --primary --output HDM
 exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper.png
 
 # Compositor
-exec --no-startup-id picom &
+exec --no-startup-id picom --no-fading-openclose
