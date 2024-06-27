@@ -1,7 +1,9 @@
 [[language]]
 name = "ocaml"
 auto-format = true
+rulers = [90]
 
 [[language]]
 name = "ocaml-interface"
 auto-format = true
+rulers = [90]
