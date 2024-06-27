@@ -9,7 +9,7 @@ zoxide init fish | source
 alias hx="helix"
 alias lg="lazygit"
 alias cd="z"
-alias ls="eza -l -a"
+alias ls="eza -l --icons --no-user"
 
 # Open Yazi
 function yy
